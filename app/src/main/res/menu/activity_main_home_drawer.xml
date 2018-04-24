@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/ic_account_circle_black_36dp"
+            android:title="Profil" />
+        <item
+            android:id="@+id/nav_usaha"
+            android:icon="@drawable/ic_store_black_36dp"
+            android:title="Usaha" />
+        <item
+            android:id="@+id/nav_profesi"
+            android:icon="@drawable/ic_format_paint_black_36dp"
+            android:title="Profesi" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_notifications_black_36dp"
+            android:title="History Notifikasi" />
+        <item
+            android:id="@+id/nav_option"
+            android:icon="@drawable/ic_settings_black_36dp"
+            android:title="Option" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_info_black_36dp"
+            android:title="Tentang Aplikasi" />
+    </group>
+
+
+</menu>

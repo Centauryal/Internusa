@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix"
+    >
+
+    <include layout="@layout/header_isiulang" android:id="@+id/include" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/footer"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Kirim"
+            android:textColor="@color/yellow"
+            android:id="@+id/btnSubmit"
+            android:background="@color/redlight"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:id="@+id/coordinate"
+        android:layout_below="@+id/include"
+        android:layout_above="@+id/footer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext_with_shadow"
+            android:orientation="horizontal"
+            android:padding="7dp"
+            android:layout_marginBottom="20dp"
+            >
+
+            <com.supersoft.internusa.view.DelayAutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/txtPhonenumber"
+                android:layout_marginLeft="15dp"
+                android:layout_centerInParent="true"
+                android:inputType="phone"
+                android:hint="Nomor Handphone"
+                />
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/pgBar"
+                android:layout_toLeftOf="@+id/btnPhonebook"
+                android:visibility="gone"
+                />
+
+            <ImageButton
+                android:id="@+id/btnPhonebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_action_contact"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="5dp"
+                />
+        </RelativeLayout>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nominal ex: 5, 10, 20"
+            android:inputType="number"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:id="@+id/txtNominal"
+            android:background="@drawable/edittext_line"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Atau jika Anda memilih voucher dibawah, Nominal tidak berlaku."
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black3d"
+            android:drawableLeft="@drawable/ic_info_outline_light"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:background="@color/darkOrange"
+            android:visibility="gone"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_edittext_with_shadow"
+            android:padding="5dp"
+            >
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/spnVoucher"
+                android:background="@drawable/spinner_background_border_bottom_black"
+                android:spinnerMode="dialog"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+            </Spinner>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

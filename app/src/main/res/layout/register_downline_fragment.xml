@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:id="@+id/header"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="DAFTAR DOWNLINE"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Form mendaftarkan downline baru Anda."
+            android:padding="10dp"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/register_uname"
+                    android:padding="10dp"
+                    android:hint="Upline"
+                    android:id="@+id/txtUpline"
+                    android:layout_marginBottom="10dp"
+                    android:typeface="monospace"
+                    android:capitalize="words"
+                    android:singleLine="true"
+                    />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/register_uname"
+                    android:padding="10dp"
+                    android:hint="Nama"
+                    android:id="@+id/txtNama"
+                    android:layout_marginBottom="10dp"
+                    android:typeface="monospace"
+                    android:capitalize="words"
+                    android:inputType="textCapWords|textCapSentences|textMultiLine"
+                    android:singleLine="true"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/register_uname"
+                    android:padding="10dp"
+                    android:hint="No Handphone"
+                    android:id="@+id/txtNohp"
+                    android:layout_marginBottom="10dp"
+                    android:typeface="monospace"
+                    android:capitalize="words"
+                    android:inputType="phone"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/register_uname"
+                    android:padding="10dp"
+                    android:hint="Email"
+                    android:id="@+id/txtEmail"
+                    android:layout_marginBottom="10dp"
+                    android:typeface="monospace"
+                    android:capitalize="words"
+                    android:inputType="textEmailAddress"
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <ProgressBar
+                        android:id="@+id/pb_loading_indicator"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:visibility="gone"/>
+
+                    <com.supersoft.internusa.view.DelayAutoCompleteTextView
+                        android:id="@+id/txtKota"
+                        android:inputType="textCapSentences"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="20dp"
+                        android:hint="Nama Kota"
+                        android:padding="10dp"
+                        android:background="@drawable/register_uname"
+                        android:imeOptions="flagNoExtractUi|actionSearch"
+                        />
+
+                </FrameLayout>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/register_uname"
+                    android:padding="10dp"
+                    android:hint="Alamat"
+                    android:id="@+id/txtAddress"
+                    android:layout_marginBottom="10dp"
+                    android:typeface="monospace"
+                    android:capitalize="words"
+                    android:inputType="textCapWords|textCapSentences|textMultiLine"
+                    />
+
+                <RadioGroup
+                    android:checkedButton="@+id/male_radio_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/radio_out_line"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/male_radio_button"
+                        android:textColor="@color/white"
+                        android:background="@drawable/selector_radio_btn_left_bg"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:text="REGULAR"
+
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        />
+
+                    <RadioButton
+                        android:id="@+id/female_radio_button"
+                        android:textColor="@color/white"
+                        android:background="@drawable/selector_radio_btn_left_bg"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:text="NETWORK"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        />
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/register_button"
+                android:id="@+id/btnSubmit"
+                android:text="KIRIM"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

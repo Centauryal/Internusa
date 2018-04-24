@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_vert_black_24dp"
+            android:layout_gravity="right"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/imgBtnMore"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <com.supersoft.internusa.helper.util.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/register_main"
+                    app:civ_border_color="@color/gray"
+                    app:civ_border_width="1dp"
+                    android:id="@+id/imgLogo"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left|center"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Full Name"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:id="@+id/txtFullname"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12sp"
+                        android:id="@+id/txtAddress"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bidang : "
+                android:layout_marginTop="10dp"
+                android:id="@+id/txtBidang"
+                android:drawableLeft="@drawable/ic_profesi"
+                android:gravity="center|left"
+                android:drawablePadding="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Posisi : "
+                android:layout_marginTop="5dp"
+                android:id="@+id/txtPosisi"
+                android:drawableLeft="@drawable/ic_podium"
+                android:gravity="center|left"
+                android:drawablePadding="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/rl_gallery"
+                android:layout_marginTop="10dp"
+                >
+
+                <android.support.v4.view.ViewPager
+                    android:layout_above="@+id/indicator_default"
+                    android:id="@+id/viewpager_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <com.supersoft.internusa.helper.pageIndicator.CirclePageIndicator
+                    android:id="@+id/indicator_default"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDescription"
+                android:text="Deskripsi"
+                />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

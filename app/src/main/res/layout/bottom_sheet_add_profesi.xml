@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix"
+
+    >
+    <!-- The main content view -->
+    <RelativeLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <android.support.v7.widget.Toolbar
+            android:layout_alignParentTop="true"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:minHeight="60dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Profesi"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                />
+
+        </android.support.v7.widget.Toolbar>
+        <RelativeLayout
+            android:id="@+id/container_fragment"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ececec"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/footer"
+                >
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SAVE"
+                    android:background="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/footer"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:text="Nama Profesi/Keahlian Anda"
+                        android:padding="10dip"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingBottom="10dip"
+                        android:text="Isi dengan keahlian spesifik Anda. Misalnya : supervisor, kepala produksi, marketing, desainer, programmer, dan lain-lain, sehingga orang lain paham kelebihan atau pengalaman Anda. Tapi khusus karyawan atau usaha jasa, jika Anda pemilik usaha tentu tidak perlu mengisinya"
+                        />
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_uname"
+                        >
+
+                        <ProgressBar
+                            android:id="@+id/pb_loading_indicator_profesi"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginRight="10dp"
+                            android:visibility="gone"/>
+
+                        <com.supersoft.internusa.view.DelayAutoCompleteTextView
+                            android:id="@+id/txtProfesi"
+                            android:inputType="textCapSentences"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dip"
+                            android:paddingRight="20dp"
+                            android:hint="Profesi Anda"
+                            android:background="#00000000"
+                            android:textSize="14sp"
+                            android:imeOptions="flagNoExtractUi|actionSearch"
+                            />
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:text="Pendidikan / Kursus"
+                        android:padding="10dip"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingBottom="10dip"
+                        android:text="Pendidikan atau kursus yang pernah ditempuh sehubungan dengan profesi diatas?"
+                        />
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_uname"
+                        >
+
+                        <ProgressBar
+                            android:id="@+id/pb_loading_indicator_pendidikan"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:visibility="gone"/>
+
+                        <com.supersoft.internusa.view.DelayAutoCompleteTextView
+                            android:id="@+id/txtPendidikan"
+                            android:inputType="textCapSentences"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dip"
+                            android:hint="Pendidikan"
+                            android:background="#00000000"
+                            android:textSize="14sp"
+                            android:imeOptions="flagNoExtractUi|actionSearch"
+                            />
+
+                    </FrameLayout>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:text="Jurusan/fakultas"
+                        android:padding="10dip"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingBottom="10dip"
+                        android:text="Jurusan/fakultas sesuai pendidikan di atas?"
+                        />
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_uname"
+                        >
+
+                        <ProgressBar
+                            android:id="@+id/pb_loading_indicator_jurusan"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:visibility="gone"/>
+
+                        <com.supersoft.internusa.view.DelayAutoCompleteTextView
+                            android:id="@+id/txtJurusan"
+                            android:inputType="textCapSentences"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dip"
+                            android:hint="Jurusan"
+                            android:textSize="14sp"
+                            android:background="#00000000"
+                            android:imeOptions="flagNoExtractUi|actionSearch"
+                            />
+
+                    </FrameLayout>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:text="Instansi"
+                        android:padding="10dip"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingBottom="10dip"
+                        android:text="isi dengan nama instansi anda bekerja"
+                        />
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_uname"
+                        >
+
+                        <ProgressBar
+                            android:id="@+id/pb_loading_indicator_instansi"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:visibility="gone"/>
+
+                        <com.supersoft.internusa.view.DelayAutoCompleteTextView
+                            android:id="@+id/txtInstansi"
+                            android:inputType="textCapSentences"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dip"
+                            android:hint="Nama Instansi"
+                            android:background="#00000000"
+                            android:textSize="14sp"
+                            android:imeOptions="flagNoExtractUi|actionSearch"
+                            />
+
+                    </FrameLayout>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:text="Posisi / Sebagai"
+                        android:padding="10dip"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingBottom="10dip"
+                        android:text="isi posisi / jabatan anda"
+                        />
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/register_uname"
+                        >
+
+                        <ProgressBar
+                            android:id="@+id/pb_loading_indicator_posisi"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:visibility="gone"/>
+
+                        <com.supersoft.internusa.view.DelayAutoCompleteTextView
+                            android:id="@+id/txtPosisi"
+                            android:inputType="textCapSentences"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dip"
+                            android:hint="Posisi/jabatan"
+                            android:background="#00000000"
+                            android:textSize="14sp"
+                            android:imeOptions="flagNoExtractUi|actionSearch"
+                            />
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:text="Deskripsi Keahlian"
+                        android:padding="10dip"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingBottom="10dip"
+                        android:text="Apa yang bisa Anda lakukan dan manfaatnya bagi orang lain/perusahaan/mitra isnis Anda ?"
+                        />
+                    <EditText
+                        android:id="@+id/txtDescription"
+                        android:inputType="textCapSentences"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dip"
+                        android:hint="Deskripsi"
+                        android:minLines="3"
+                        android:gravity="top|left"
+                        android:singleLine="false"
+                        android:background="@drawable/register_uname"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

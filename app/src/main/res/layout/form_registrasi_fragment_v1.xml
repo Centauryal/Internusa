@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingPrefix"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:minHeight="50dp"
+        android:background="@color/redlight"
+        android:gravity="center_horizontal"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        >
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar Baru"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/header"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@+id/footer"
+        android:padding="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Lengkap"
+                android:padding="15dp"
+                android:textSize="15sp"
+                android:id="@+id/txtFullname"
+                android:singleLine="true"
+                android:inputType="text"
+                android:background="@drawable/rounded_edittext_with_shadow"
+                android:layout_marginBottom="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_edittext_with_shadow"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"
+                >
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/spnCountryCode"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/spinner_drawable"
+                    android:paddingRight="15dp"
+                    >
+
+                </Spinner>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="No Handphone"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/txtPhonenumber"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:layout_marginRight="13dp"
+                    android:background="@color/white"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_edittext_with_shadow"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.supersoft.internusa.view.DelayAutoCompleteTextView
+                    android:id="@+id/txtAddress"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:hint="Nama Kota"
+                    android:imeOptions="flagNoExtractUi|actionSearch"
+                    android:background="@color/white"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textSize="15sp"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/pb_loading_indicator"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="15dp"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:padding="15dp"
+                android:textSize="15sp"
+                android:background="@drawable/rounded_edittext_with_shadow"
+                android:layout_marginBottom="10dp"
+                />
+
+            <EditText
+                android:id="@+id/txtUpline"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Upline (Optional boleh kosong)"
+                android:inputType="text"
+                android:singleLine="true"
+                android:padding="15dp"
+                android:textSize="15sp"
+                android:background="@drawable/rounded_edittext_with_shadow"
+                android:layout_marginBottom="10dp"
+                />
+
+            <RadioGroup
+                android:checkedButton="@+id/male_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:layout_marginRight="15dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/male_radio_button"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="Laki-Laki"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/female_radio_button"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="Perempuan"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Passcode bisa digunakan untuk login, Pastikan kombinasi passcode mudah di ingat."
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/yellow"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:textSize="12sp"
+                />
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:background="@drawable/rounded_edittext_with_shadow"
+                android:padding="15dp"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <EditText
+                android:id="@+id/txtConfirmPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Konfirmasi Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:background="@drawable/rounded_edittext_with_shadow"
+                android:padding="15dp"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black3d"
+        android:gravity="center"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="SUBMIT"
+            android:textColor="@color/yellow"
+            android:id="@+id/btnSubmit"
+            android:background="@color/redlight"
+            />
+    </RelativeLayout>
+</RelativeLayout>

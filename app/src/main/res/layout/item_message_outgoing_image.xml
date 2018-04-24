@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="45dp"
+    android:layout_marginRight="2dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/date_bubble_white"
+        android:orientation="vertical"
+        android:minHeight="53dp"
+        android:layout_marginLeft="-4dp"
+        android:longClickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/messageContainer"
+        >
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="24:00"
+            android:textSize="12sp"
+            android:textColor="@color/redlight"
+            android:gravity="center"
+            android:paddingRight="8dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgLogo"
+            android:adjustViewBounds="true"
+
+            />
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDate"
+            android:layout_alignParentRight="true"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:gravity="left"
+            android:paddingRight="8dp"
+            android:autoLink="web"
+            android:longClickable="true"
+            android:textColorHighlight="@color/gray"
+            android:textColorLink="@color/black3d"
+            />
+
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="6dp"
+        android:singleLine="true"
+        android:text="From xx"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        />
+</RelativeLayout>

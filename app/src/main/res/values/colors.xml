@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="primary500">#ff259b24</color>
+    <color name="primary700">#ff0a7e07</color>
+    <color name="primary800">#ff026100</color>
+    <color name="primary900">#ff024500</color>\
+
+    <color name="white">#FFFFFF</color>
+    <color name="redlight">#BD3538</color>
+    <color name="yellow">#FFF212</color>
+
+
+    <color name="black3d">#3d3d3d</color>
+    <color name="black">#000000</color>
+    <color name="orange">#FA0</color>
+    <color name="darkOrange">#FF6D00</color>
+    <color name="gray">#969696</color>
+    <color name="graylight">#dddddd</color>
+    <color name="light_gray">#efefef</color>
+
+    <color name="vpi__background_holo_dark">#ff000000</color>
+    <color name="vpi__background_holo_light">#fff3f3f3</color>
+    <color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light</color>
+    <color name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark</color>
+    <color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="vpi__bright_foreground_inverse_holo_dark">@color/vpi__bright_foreground_holo_light</color>
+    <color name="vpi__bright_foreground_inverse_holo_light">@color/vpi__bright_foreground_holo_dark</color>
+
+
+    <color name="multiple_image_select_primary">#FFFFFF</color>
+    <color name="multiple_image_select_albumTextBackground">@color/colorPrimary</color>
+    <color name="multiple_image_select_imageSelectBackground">#000000</color>
+
+
+    <color name="style_color_primary">#2d5d82</color>
+    <color name="style_color_primary_dark">#21425d</color>
+    <color name="style_color_accent">#01bcd5</color>
+
+    <color name="fab_color_pressed">#007787</color>
+    <color name="fab_color_shadow">#44000000</color>
+
+    <color name="btn_default_light_normal">#00000000</color>
+    <color name="btn_default_light_pressed">#40ffffff</color>
+    <color name="btn_send_normal">#02c754</color>
+    <color name="btn_send_pressed">#006633</color>
+    <color name="btn_default_shadow">#99000000</color>
+    <color name="btn_context_menu_normal">#ffffff</color>
+    <color name="btn_context_menu_pressed">#40000000</color>
+    <color name="btn_context_menu_text_red">#ffff0000</color>
+
+    <color name="text_like_counter">#2b5a83</color>
+
+    <color name="bg_comments">#ffffff</color>
+
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+    <color name="timeline_green_header">#a2e497</color>
+    <color name="timeline_green_body">#d9f3d5</color>
+    <color name="timeline_orange_header">#f8da9b</color>
+    <color name="timeline_orange_body">#faefd9</color>
+
+    <color name="colorYellow">#F5FA55</color>
+
+    <color name="publik_color">#3E3E3E</color>
+    <color name="info_color">#0CB50B</color>
+    <color name="konsul_color">#F8761F</color>
+
+    <color name="from">#000000</color>
+    <color name="subject">#111111</color>
+    <color name="timestamp">#4285f4</color>
+    <color name="message">#7a7a7a</color>
+    <color name="icon_tint_normal">#7a7a7a</color>
+    <color name="icon_tint_selected">#fed776</color>
+    <color name="row_activated">#e0e0e0</color>
+    <color name="bg_action_mode">#757575</color>
+    <color name="bg_circle_default">#666666</color>
+
+    <color name="bs_divider_color">#1f000000</color>
+    <color name="bs_dark_divider_color">#1fffffff</color>
+
+    <color name="dot_fill">#EEFFFFFF</color>
+
+    <color name="dot_stroke">#99CCCCCC</color>
+</resources>

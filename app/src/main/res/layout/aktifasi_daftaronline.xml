@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingPrefix"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:id="@+id/header"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang "
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INTERNUSA adalah sebuah aplikasi media sosial khusus untuk mengenal potensi bisnis dan profesi rekan-rekan di sekitar kita. Dilengkapi dengan sistem pembayaran online untuk keperluan sehari-hari."
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Untuk yang sudah pernah mendaftarkan, silahkan klik tombol Aktifasi."
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="AKTIFASI"
+            android:textColor="@color/yellow"
+            android:id="@+id/btnSubmit"
+            android:background="@color/redlight"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Atau Daftar langsung, bila belum pernah mendaftarkan."
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:layout_margin="20dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Daftar Online"
+            android:textColor="@color/yellow"
+            android:id="@+id/btnDaftar"
+            android:background="@color/redlight"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

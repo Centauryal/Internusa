@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.PreferenceScreen
+        android:title="History Pembayaran"
+        android:summary="History Pembarayan dan pembelian"
+        android:key="hitory_pembayaran" />
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="Export dan Import Kontak">
+
+        <android.support.v7.preference.PreferenceScreen
+            android:title="Sync Contact"
+            android:summary="Backup Contact Anda"
+            android:key="sync_contact" />
+
+        <android.support.v7.preference.PreferenceScreen
+            android:title="Retreive Contact"
+            android:summary="Import Contact ke ponsel"
+            android:key="retreive_contact" />
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="Printer">
+
+            <android.support.v7.preference.PreferenceScreen
+                android:title="Printer"
+                android:summary="Konek ke printer bluetooth"
+                android:key="connecting_printer" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="Notification">
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:title="All Notification"
+            android:key="all_notification" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="Service">
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:title="Run as background"
+            android:key="run_as_background" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>

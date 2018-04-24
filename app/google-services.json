@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "707946552106",
+    "firebase_url": "https://internusa-b1b1a.firebaseio.com",
+    "project_id": "internusa-b1b1a",
+    "storage_bucket": "internusa-b1b1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707946552106:android:c8c9dee035cbdab7",
+        "android_client_info": {
+          "package_name": "com.supersoft.internusa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707946552106-hr11acvnf8qk876a8rrh9di62ifirl8a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMbuHsSFQ3GWS0xGSpEYamnQbPTVEFQOc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

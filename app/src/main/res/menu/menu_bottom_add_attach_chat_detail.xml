@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/att_camera"
+        android:title="Camera"
+        android:icon="@drawable/ic_attach_camera" />
+    <item
+        android:id="@+id/att_image"
+        android:title="Gallery"
+        android:icon="@drawable/ic_attach_photo" />
+    <item
+        android:id="@+id/att_document"
+        android:title="Document"
+        android:icon="@drawable/ic_attach_document" />
+
+
+    <item
+        android:id="@+id/att_audio"
+        android:title="Audio"
+        android:icon="@drawable/ic_attach_record" />
+
+    <item
+        android:id="@+id/att_video"
+        android:title="Video"
+        android:icon="@drawable/ic_attach_videocam" />
+
+    <item
+        android:id="@+id/att_location"
+        android:title="Location"
+        android:icon="@drawable/ic_attach_location" />
+</menu>

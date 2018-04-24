@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status : "
+                />
+
+            <Spinner
+                android:id="@+id/spnStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/aStatusTimline"
+                android:background="@drawable/spinner_drawable"
+                android:paddingRight="15dp"
+                android:layout_marginRight="5dp"
+                android:spinnerMode="dropdown"
+                >
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/spnTujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/aStatusTimline"
+                android:background="@drawable/spinner_drawable"
+                android:paddingRight="15dp"
+                android:visibility="gone"
+                >
+
+            </Spinner>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDescription"
+            android:hint=""
+            android:padding="5dp"
+            android:minLines="4"
+            android:textSize="14sp"
+            android:gravity="left|top"
+            android:background="@drawable/rounded_edittext_timeline"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textColorHint="@color/graylight"
+
+            />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/view_selected_photos_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        >
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_selected_photos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+    </FrameLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_image"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/imgAddNew"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_gps_location"
+            android:id="@+id/imgAddLocation"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/btnSubmit"
+            android:layout_toEndOf="@+id/imgAddNew" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/imgAddLocation"
+            android:layout_toLeftOf="@+id/btnSubmit"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:id="@+id/txtLocation"
+                android:textSize="10sp"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:text="KIRIM"
+            android:background="@drawable/button_selector_send_timeline"
+            />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
