@@ -313,7 +313,7 @@ public class SplashMain extends AppCompatActivity implements FCMListener {
                     boolean ok = db.addProfil("", "", "", "", "", "1", "0", "");
 
                     if (ok) {
-                        StartApp.startLoginXmpp();
+                        //StartApp.startLoginXmpp();
                         new AlertDialog.Builder(SplashMain.this)
                                 .setTitle("Aktifasi")
                                 .setMessage("Selamat!!!!\nAktifasi berhasil, Tekan tombol OK untuk melanjutkan.")

@@ -6,7 +6,7 @@
             android:id="@+id/nav_profil"
             android:icon="@drawable/ic_account_circle_black_36dp"
             android:title="Profil" />
-        <item
+        <!--<item
             android:id="@+id/nav_usaha"
             android:icon="@drawable/ic_store_black_36dp"
             android:title="Usaha" />
@@ -17,7 +17,7 @@
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_notifications_black_36dp"
-            android:title="History Notifikasi" />
+            android:title="History Notifikasi" />-->
         <item
             android:id="@+id/nav_option"
             android:icon="@drawable/ic_settings_black_36dp"

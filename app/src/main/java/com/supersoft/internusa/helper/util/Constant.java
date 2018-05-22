@@ -99,9 +99,9 @@ public class Constant {
     public static String BASE_URL = "http://rekankita.com/"; //195.110.58.164
     public static String SELECTION_PHOTO = "Ambil Photo";
     public static String SELECTION_GALLERY = "Pilih Gallery";
-    public static String APP_PATH_SD_CARD = "/INTERNUSA";
+    public static String APP_PATH_SD_CARD = "/Internusa";
     //public static final String CONTROLLER_REKANKITA = "android/v2/index.php/{controller}/{function}";
-    public static final String CONTROLLER_DEV = (RELEASE_TYPE.equals("dev")) ? "devcontroller" : "internusa";
+    public static final String CONTROLLER_DEV = (RELEASE_TYPE.equals("dev")) ? "devcontroller" : "microz";
     public static final String CONTROLLER_2S = "android/v2/index.php/%s/%s";
     public static final String CONTROLLER_3S = "android/v2/index.php/%s/%s/%s";
     public static final String CONTROLLER_4S = "android/v2/index.php/%s/%s/%s/%s";
@@ -989,7 +989,7 @@ public class Constant {
                 _session.setMemid(response.body().get("mem_id").getAsInt());
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(_context);
                 prefs.edit().putBoolean("xmpp_registered", true).commit();
-                StartApp.startLoginXmpp();
+                //StartApp.startLoginXmpp();
             }
 
             @Override

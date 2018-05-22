@@ -171,7 +171,7 @@ public class StartApp extends Application implements Application.ActivityLifecyc
         Log.e("StartApp","saveCredentialsAndLogin() called. activated " + activated +" memid " + _session.getMemid());
         if(activated.equals("1") && (_session.getMemid() > 0))
         {
-            ProfilDB profil = new DBHelper(applicationContext).getProfilDb();
+            /*ProfilDB profil = new DBHelper(applicationContext).getProfilDb();
             String jid = _session.getMemid() + "-" + applicationContext.getResources().getString(R.string.CONF_MITRAID).toLowerCase() + "@"+Constant.XMPP_HOST;
 
             boolean regsitered = PreferenceManager.getDefaultSharedPreferences(applicationContext).getBoolean("xmpp_registered",false);
@@ -181,16 +181,16 @@ public class StartApp extends Application implements Application.ActivityLifecyc
                         .putString("xmpp_jid", jid.toLowerCase())
                         .putString("xmpp_password", "123456")
                         .putBoolean("xmpp_logged_in", true)
-                        .commit();
+                        .commit();*/
 
 
                 Intent intent = new Intent(applicationContext, RestartServiceReceiver.class);
                 intent.setAction(ConnectionService.START_LOGIN_XMPP);
                 applicationContext.sendBroadcast(intent);
 
-            }
+            //}
         }
-        else if(activated.equals("1") && (_session.getMemid() <= 0))
+        /*else if(activated.equals("1") && (_session.getMemid() <= 0))
         {
             new Handler().postDelayed(new Runnable() {
                 @Override
@@ -199,7 +199,7 @@ public class StartApp extends Application implements Application.ActivityLifecyc
                 }
             }, 1000);
 
-        }
+        }*/
     }
 
 

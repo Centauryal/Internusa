@@ -72,9 +72,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     private ViewPager mViewPager;
     private int[] imageResId = {
             R.drawable.ic_action_info,
-            R.drawable.ic_action_profil,
+            //R.drawable.ic_action_profil,
             R.drawable.ic_action_payment,
-            R.drawable.ic_action_discussion
+            //R.drawable.ic_action_discussion
     };
 
     DBHelper _db;
@@ -82,7 +82,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     private PrefManager prefManager;
     TelephonyManager tm;
     //private String[] titleId = {"Info", "Profil", "Iklan", "Etalasae", "Payment"};
-    private String[] titleId = {"Info & Konsultasi", "Profil", "Payment", "Diskusi"};
+    private String[] titleId = {"Info & Konsultasi", "Payment"};
 
     @BindView(R.id.btnLogout)
     Button btnLogout;
@@ -284,22 +284,10 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         int id = item.getItemId();
         if (id == R.id.nav_profil) {
             Constant.showActivity(this, UserProfileActivity.class, false);
-        } else if (id == R.id.nav_profesi) {
-            Intent inten = new Intent(this, MainTabUsahaProfesi.class);
-            inten.putExtra("selected", 1);
-            startActivity(inten);
-        } else if (id == R.id.nav_usaha) {
-            Intent inten = new Intent(this, MainTabUsahaProfesi.class);
-            inten.putExtra("selected", 0);
-            startActivity(inten);
         } else if (id == R.id.nav_option) {
             Constant.showActivity(this, OptionActivity.class, false);
         } else if (id == R.id.nav_info) {
             Constant.showActivity(this, About.class, false);
-        }
-        else if(id == R.id.nav_history)
-        {
-            Constant.showActivity(this, Historyloginfo.class, false);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -364,10 +352,10 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
             switch (position){
                 case 0 : return MainInfoFragment.newInstance();
-                case 1 : return MainProfil.newInstance();
+                //case 1 : return MainProfil.newInstance();
                 //case 2 : return MainInfoFragment.newInstance();
-                case 2 : return MainPayment.newInstance();
-                case 3 : return ChatActivity.newInstance(mTabs);
+                case 1 : return MainPayment.newInstance();
+                //case 2 : return ChatActivity.newInstance(mTabs);
             }
             return null;
         }
@@ -375,7 +363,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         @Override
         public int getCount() {
 
-            return 4;
+            return 2;
 
         }
 
@@ -480,9 +468,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                             int ada = _db.countUnreadChatAllTopik();
                             Log.e("chatDash", "Unread subscribe : " + ada);
                             if(ada > 0)
-                                mTabs.with(3).badge(true).icon(imageResId[3]).label("Diskusi").badgeCount((ada == 0) ? 1 : ada).build();
+                                mTabs.with(2).badge(true).icon(imageResId[2]).label("Diskusi").badgeCount((ada == 0) ? 1 : ada).build();
                             else
-                                mTabs.with(3).noBadge().build();
+                                mTabs.with(2).noBadge().build();
                         }
                     });
                 default:
@@ -500,7 +488,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                     public void run() {
                         int ada = _db.countUnreadChatAllTopik();
                         Log.e("chatDash", "Unread subscribe : " + ada);
-                        mTabs.with(3).badge(true).icon(imageResId[3]).label("Diskusi").badgeCount((ada == 0) ? 1 : ada).build();
+                        mTabs.with(2).badge(true).icon(imageResId[2]).label("Diskusi").badgeCount((ada == 0) ? 1 : ada).build();
                     }
                 });
             }
