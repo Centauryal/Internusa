@@ -101,7 +101,7 @@ public class Constant {
     public static String SELECTION_GALLERY = "Pilih Gallery";
     public static String APP_PATH_SD_CARD = "/Internusa";
     //public static final String CONTROLLER_REKANKITA = "android/v2/index.php/{controller}/{function}";
-    public static final String CONTROLLER_DEV = (RELEASE_TYPE.equals("dev")) ? "devcontroller" : "microz";
+    public static final String CONTROLLER_DEV = (RELEASE_TYPE.equals("microz")) ? "devcontroller" : "microz";
     public static final String CONTROLLER_2S = "android/v2/index.php/%s/%s";
     public static final String CONTROLLER_3S = "android/v2/index.php/%s/%s/%s";
     public static final String CONTROLLER_4S = "android/v2/index.php/%s/%s/%s/%s";
